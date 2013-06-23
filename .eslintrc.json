@@ -1,9 +1,7 @@
 {
+  "parser": "babel-eslint",
   "root": true,
-  "extends": [
-    "airbnb",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["airbnb", "plugin:prettier/recommended"],
   "env": {
     "browser": true
   },
@@ -11,19 +9,13 @@
     "graphql": true
   },
   "settings": {
-    "import/core-modules": [
-      "prop-types",
-      "react"
-    ]
+    "import/core-modules": ["prop-types", "react"]
   },
   "rules": {
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ],
     "react/prefer-stateless-function": [
@@ -32,29 +24,16 @@
         "ignorePureComponents": true
       }
     ],
-    "react/prop-types": [
-      false
-    ],
-    "react/no-danger": [
-      false
-    ],
-    "react/require-default-props": [
-      false
-    ],
+    "react/prop-types": [false],
+    "react/no-danger": [false],
+    "react/require-default-props": [false],
+    "react/destructuring-assignment": [false],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
-        "components": [
-          "Link"
-        ],
-        "specialLink": [
-          "to"
-        ],
-        "aspects": [
-          "noHref",
-          "invalidHref",
-          "preferButton"
-        ]
+        "components": ["Link"],
+        "specialLink": ["to"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
       }
     ]
   }

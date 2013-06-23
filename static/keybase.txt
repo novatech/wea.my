@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/azwan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://wea.my
+  * I am azwan (https://keybase.io/azwan) on keybase.
+  * I have a public key ASAUZ17rlrVNa8mOIPvdQFuG5HXYxFKZN_o-XbqTGKEtAgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01010d14721566e663362e094cd7f1ca47ff52c53aed13359e8762217263dd46816e0a",
+      "host": "keybase.io",
+      "kid": "012027633e0eb6a240659248826341d0da4f3c04a6bd281f3f4bd65b968a31b24c7d0a",
+      "uid": "500cd94686936bd8d05c50082edc9519",
+      "username": "azwan"
+    },
+    "merkle_root": {
+      "ctime": 1550590229,
+      "hash": "e013a3a298e7a833c6fa976c31ecf5ccb907bcce0b0c0772d6bcec29b024ec3d7de566912e17bc9d22c668fcfa3013ed69474513fbfae6fea7fc84e61b7ad2db",
+      "hash_meta": "533f856c2a67ba925c1deb5265f6923557d46cbcace63db286c276b0c2e191b2",
+      "seqno": 4792123
+    },
+    "service": {
+      "entropy": "WYm/yv4wc8CkeorR90nsIyeQ",
+      "hostname": "wea.my",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.0.0"
+  },
+  "ctime": 1550590243,
+  "expire_in": 504576000,
+  "prev": "78de0bc8d20efed2ca0709ed4ac8a00d952d4dc953836937635b3ba9288148cb",
+  "seqno": 32,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgJ2M+DraiQGWSSIJjQdDaTzwEpr0oHz9L1luWijGyTH0Kp3BheWxvYWTESpcCIMQgeN4LyNIO/tLKBwntSsigDZUtTclTg2k3Y1s7qSiBSMvEILPVO1YykKxJtJmY8qJKEVYlGJ6ndY18wi7BMBymcaw9AgHCo3NpZ8RACWC5EP+9QAsidaV4eUtgsOo3dx3nA/T78RU2FG2LxJ3N6L87JeUB0gaBgEXtUVZEAu/pQb2eZHYKiF7pXCKfAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEII0Pr68X8d277glo089TZw1Os718vYL6jZeJbgUAjO0ho3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/azwan
+
+==================================================================

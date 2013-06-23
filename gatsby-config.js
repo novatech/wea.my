@@ -5,7 +5,6 @@ module.exports = {
   },
   pathPrefix: '/',
   plugins: [
-    'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -13,23 +12,35 @@ module.exports = {
         name: 'pages',
       },
     },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-purify-css',
     {
-      resolve: 'gatsby-plugin-postcss-sass',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        postCssPlugins: [
-          // eslint-disable-next-line global-require
-          require('postcss-import')(),
-          // eslint-disable-next-line global-require
-          require('autoprefixer')(),
-        ],
+        name: 'wea.my',
+        short_name: 'wea.my',
+        start_url: '/',
+        background_color: '#ff9a00',
+        theme_color: '#ff9a00',
+        display: 'minimal-ui',
+        icon: 'static/wea-logo.png',
       },
     },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-postcss`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+            },
+          },
           'gatsby-remark-copy-linked-files',
           {
             resolve: 'gatsby-remark-external-links',

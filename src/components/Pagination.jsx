@@ -1,22 +1,28 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Pagination = props => (
+const Pagination = ({ prevPath, prevTitle, nextPath, nextTitle }) => (
   <nav className="level" aria-label="pagination">
-    {props.prevPath && (
+    {prevPath && (
       <div className="level-left">
         <div className="level-item">
-          <a className="button is-info" rel="prev" title={props.prevTitle} href={props.prevPath}>
-            <span aria-hidden="true">← {props.prevTitle}</span>
+          <a className="button is-info" rel="prev" title={prevTitle} href={prevPath}>
+            <span aria-hidden="true">
+              &#8592;
+              {prevTitle}
+            </span>
           </a>
         </div>
       </div>
     )}
-    {props.nextPath && (
+    {nextPath && (
       <div className="level-right">
         <div className="level-item">
-          <a className="button is-info" rel="prev" title={props.nextTitle} href={props.nextPath}>
-            <span aria-hidden="true">{props.nextTitle} →</span>
+          <a className="button is-info" rel="prev" title={nextTitle} href={nextPath}>
+            <span aria-hidden="true">
+              {nextTitle}
+              &#8594;
+            </span>
           </a>
         </div>
       </div>
