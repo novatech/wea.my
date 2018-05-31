@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^8.5.1",
+    "bulma": "^0.7.1",
+    "gatsby": "^1.9.261",
+    "gatsby-link": "^1.6.44",
+    "gatsby-pagination": "^1.2.0",
+    "gatsby-plugin-catch-links": "^1.0.22",
+    "gatsby-plugin-netlify": "^1.0.19",
+    "gatsby-plugin-no-sourcemaps": "^1.0.5",
+    "gatsby-plugin-postcss-sass": "^1.0.20",
+    "gatsby-plugin-purify-css": "^2.2.1",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-remark-copy-linked-files": "^1.5.32",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-remark-prismjs": "^2.0.2",
+    "gatsby-source-filesystem": "^1.5.36",
+    "gatsby-transformer-remark": "^1.7.41",
+    "postcss-import": "^11.1.0",
+    "prismjs": "^1.14.0",
+    "prop-types": "^15.6.1",
+    "react-helmet": "^5.2.0",
+    "remark-lint": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.8.2",
+    "prettier": "^1.13.0",
+    "prettier-eslint": "^8.8.1",
+    "prettier-eslint-cli": "^4.7.1"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop -o",
+    "lint": "eslint --ignore-path .gitignore \"**/*.{js,jsx}\"",
+    "format": "prettier-eslint --write \"**/*.{js,jsx,json,scss,css,md}\"",
+    "remark-lint": "remark src/pages/"
+  }
+}

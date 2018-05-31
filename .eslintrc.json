@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "graphql": true
+  },
+  "settings": {
+    "import/core-modules": [
+      "prop-types",
+      "react"
+    ]
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/prefer-stateless-function": [
+      true,
+      {
+        "ignorePureComponents": true
+      }
+    ],
+    "react/prop-types": [
+      false
+    ],
+    "react/no-danger": [
+      false
+    ],
+    "react/require-default-props": [
+      false
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "to"
+        ],
+        "aspects": [
+          "noHref",
+          "invalidHref",
+          "preferButton"
+        ]
+      }
+    ]
+  }
+}

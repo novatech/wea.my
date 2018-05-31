@@ -1,0 +1,172 @@
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+
+$family-serif: 'Open Sans', sans-serif;
+$family-primary: $family-serif;
+
+$primary: #ff9a00;
+$primary-invert: findColorInvert($primary);
+$info: #3ec1d3;
+$link: #ff165d;
+
+$body-background-color: #f8f3d4;
+$body-size: 14px;
+
+.hero-body {
+  background-image: url('/hero-background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+.articles {
+  margin: 3rem 0;
+  margin-top: -200px;
+}
+
+.articles .content p {
+  line-height: 1.9;
+  margin: 15px 0;
+}
+
+.author-image {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.media-center {
+  display: block;
+  margin-bottom: 1rem;
+}
+.media-content {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.article {
+  margin-top: 6rem;
+}
+
+div.column.is-8:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+div.column.is-8:last-child {
+  margin-bottom: 3rem;
+}
+
+.article-title {
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 2;
+}
+
+.article-subtitle {
+  color: #909aa0 !important;
+}
+
+.article-body {
+  line-height: 1.4;
+  margin: 0 1rem;
+  word-break: break-word;
+}
+
+.container {
+  margin: 1rem 5rem;
+}
+
+.content .tag,
+.content .number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2)
+      format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2)
+      format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2)
+      format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2)
+      format('woff2');
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2)
+      format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2)
+      format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
+      format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F,
+    U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@import 'prismjs/themes/prism-okaidia.css';
+@import '~bulma/bulma';
