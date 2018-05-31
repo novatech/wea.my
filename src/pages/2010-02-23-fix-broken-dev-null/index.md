@@ -9,6 +9,7 @@ tags:
 ---
 
 if you accidentally deleted /dev/null file here's a simple way how to re-create it
+
 ```console
 mknod -m 666 /dev/null c 1 3
 ```

@@ -28,6 +28,7 @@ CONCURRENCY_LEVEL=3 fakeroot make-kpkg \
 note you need to use same **--revision=0.1** everytime you do this.. so just pick one number that you wont forget. 0.1 sound good. **CONCURRENCY_LEVEL=3** mean using multi thread in compiling. if you have 4 core processor change it into 5 and so on. it's core+1
 
 another quick workaround that might be handy when you're working on latest kernel from 2.6.31 to 2.6.32 where you get error version missmatch. this is due to build script looking for utsrelease.h but it doesn't exist in include/linux folder anymore. you can either symlink it to ./include/generated/utsrelease.h
+
 ```console
 ln -s ./include/generated/utsrelease.h ./include/linux/utsrelease.h
 ```

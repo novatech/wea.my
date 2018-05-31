@@ -10,21 +10,25 @@ Download required linux driver (RT8070 /RT3070 /RT3370 /RT5370 /RT5372 USB) from
 http://www.ralinktech.com/en/04_support/support.php?sn=501
 
 install required files to build this
+
 ```console
 sudo apt-get install build-essential linux-headers-$(uname -r)
 ```
 
 extract the source
+
 ```console
 tar xjvf 2011_0719_RT3070_RT3370_RT5370_RT5372_Linux_STA\V2.5.0.3_DPO.bz2 && cd 2011_0719_RT3070\*
 ```
 
 inline edit /os/linux/config.mk to enable WPA support (i'm too lazy to fire vim)
+
 ```console
 perl -i -pe 's/^(HAS_WPA_SUPPLICANT|HAS_NATIVE_WPA_SUPPLICANT_SUPPORT)=(n)$/\1=y/g' os/linux/config.mk
 ```
 
 lets verify that we correctly replace the string (shrug!)
+
 ```console
 grep -E '^(HAS_WPA_SUPPLICANT|HAS_NATIVE_WPA_SUPPLICANT_SUPPORT)' os/linux/config.mk
 HAS_WPA_SUPPLICANT=y
@@ -38,16 +42,19 @@ sudo make && sudo make install
 ```
 
 add module to the kernel
+
 ```console
 sudo modprobe rt5370sta
 ```
 
 check if your network card
+
 ```console
 ifconfig -a;iwconfig
 ```
 
 You should see something like below..
+
 ```console
 ra0 Link encap:Ethernet HWaddr f8:d1:11:09:cf:87
 

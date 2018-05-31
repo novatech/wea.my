@@ -11,38 +11,45 @@ tags:
 recently i've been using packetix.net vpn and the speed is quite good, unfortunately there's not many guide on how to use the client on linux, so i'm writing one. this gonna be very long..so bear with me till the end ..huhu
 
 to make things easier, lets transform into root :D
+
 ```consoles
 sudo su && cd ~
 ```
 
 now, make a folder name vpn and download the vpnclient file from their web http://packetix.net/en/secure/install/
+
 ```console
 mkdir vpn && cd vpn
 wget -c http://packetix.net/en/special/files/vpn2\_5350\_en/vpnclient-5350a-rtm-en-linux-x86.tar.gz
 ```
 
 now to compile this files, you need zlib, openssl, readline and ncurses.
+
 ```console
 apt-get install zlib1g-dev libreadline5-dev
 ```
 
 once finish,extract the file and continue with compile
+
 ```console
 tar -zxvf vpnclient-5350a-rtm-en-linux-x86.tar.gz && cd vpnclient* && make
 ```
 
 connecting/tunneling to packettix.net
+
 ```console
 ./vpnclient start
 ./vpncmd
 ```
 
 inside vpncmd, choose number 2
+
 ```console
 [2] Management of VPN Clinet and input localhost as the destination host
 ```
 
 u will see something like this,
+
 ```console
 Input destination: localhost
 
@@ -94,6 +101,7 @@ The command terminated normally.
 ```
 
 now lets configure our account and connection
+
 ```console
 VPN Client>niclist
 
@@ -157,6 +165,7 @@ The command terminated normally.
 ```
 
 wait for awhile and list the account again
+
 ```console
 VPN Client>accountlist
 
@@ -178,6 +187,7 @@ The command terminated normally.
 ```
 
 set this as default connection everytime vpnclient started
+
 ```console
 VPN Client>AccountStartupSet
 
@@ -189,6 +199,7 @@ VPN Client>quit
 ```
 
 now check for connection, note the interface postfix **\_0** at the end of **vpn**
+
 ```console
 root@bur8:~/vpnclient> ifconfig vpn_0
 
@@ -206,6 +217,7 @@ RX bytes:463867 (463.8 KB)  TX bytes:0 (0.0 B)
 ```
 
 get dhcp from vpn
+
 ```console
 root@bur8:~/vpnclient> dhclient vpn_0
 
@@ -231,6 +243,7 @@ inet addr:10.3.83.250 Bcast:10.255.255.255 Mask:255.0.0.0
 now you can start routing you connection to vpn... `sorry but this is a noob routing technique, it should redirect all your traffic to vpn`
 
 route connection to packet vpn thru main gw
+
 ```console
 route add -net 130.158.6.0/24 gw 192.168.182.1
 
@@ -238,6 +251,7 @@ dhclient vpn_0
 ```
 
 to route all connection to vpn gw
+
 ```console
 ip route del default via 192.168.182.1
 
@@ -245,6 +259,7 @@ ip route add default via 10.0.0.1 dev vpn_0
 ```
 
 route only specific destion thru vpn gw
+
 ```console
 ip route del default via 10.0.0.1 dev vpn_0
 

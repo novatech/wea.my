@@ -99,6 +99,7 @@ void GLWidget::paintGL() {
 ...that's it, all done!
 
 **footnote:**
-1. why use PaintGL instead of QPainter? oh well..the answer is simple it's fast and can be utilize for complex image processing rendering such as 3D augmented reality.
-2. note that this is direct implementation of image capturing from webcam using QTimer. for heavy processing job you might want to consider running processsCAM() and processingFrame() job on different thread.
-3. you may download opencv2Qt source code for details until then, happy coding and hope this code can be useful to someone :)
+
+1.  why use PaintGL instead of QPainter? oh well..the answer is simple it's fast and can be utilize for complex image processing rendering such as 3D augmented reality.
+2.  note that this is direct implementation of image capturing from webcam using QTimer. for heavy processing job you might want to consider running processsCAM() and processingFrame() job on different thread.
+3.  you may download opencv2Qt source code for details until then, happy coding and hope this code can be useful to someone :)

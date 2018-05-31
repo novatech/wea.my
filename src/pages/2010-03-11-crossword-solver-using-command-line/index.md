@@ -21,12 +21,15 @@ and we have crossword like this
 **\_,\_,\_,r,\_,p,\_,\_,\_,\_,\_,\_,\_,r**
 
 now using common word list table we can easily solve this by
+
 ```console
 grep -e ^...r.p.......r$ /usr/share/dict/words
 ```
-**note:** empty space **(_)** was replaced by dot **(.)** notation
+
+**note:** empty space **(\_)** was replaced by dot **(.)** notation
 
 also make sure you have the word list package installed
+
 ```console
 sudo apt-get install wamerican
 ```
