@@ -240,7 +240,8 @@ vpn_0     Link encap:Ethernet  HWaddr 00:ac:9d:03:5c:f6
 inet addr:10.3.83.250 Bcast:10.255.255.255 Mask:255.0.0.0
 ```
 
-now you can start routing you connection to vpn... `sorry but this is a noob routing technique, it should redirect all your traffic to vpn`
+now you can start routing you connection to vpn...\
+`beware noob routing technique ahead, but it should get the job done and should redirect all your traffic to vpn`
 
 route connection to packet vpn thru main gw
 
