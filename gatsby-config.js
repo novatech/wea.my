@@ -5,7 +5,6 @@ module.exports = {
   },
   pathPrefix: '/',
   plugins: [
-    'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -14,18 +13,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-purify-css',
-    {
-      resolve: 'gatsby-plugin-postcss-sass',
-      options: {
-        postCssPlugins: [
-          // eslint-disable-next-line global-require
-          require('postcss-import')(),
-          // eslint-disable-next-line global-require
-          require('autoprefixer')(),
-        ],
-      },
-    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
