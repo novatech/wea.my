@@ -1,5 +1,5 @@
 import React from 'react';
-import './all.scss';
+import './layout.scss';
 
 class Template extends React.Component {
   render() {
@@ -38,7 +38,7 @@ class Template extends React.Component {
             </div>
           </div>
         </section>
-        {children()}
+        {children}
       </div>
     );
   }
