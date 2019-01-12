@@ -21,7 +21,7 @@ module.exports = {
         background_color: '#ff9a00',
         theme_color: '#ff9a00',
         display: 'minimal-ui',
-        icon: 'static/wea.png',
+        icon: 'static/wea-logo.png',
       },
     },
     'gatsby-plugin-offline',

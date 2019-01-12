@@ -1,24 +1,43 @@
 import React from 'react';
 import './layout.scss';
 
-class Template extends React.Component {
+class Layout extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { active: false };
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState(prevState => ({
+      active: !prevState.active,
+    }));
+  }
+
   render() {
     const { children } = this.props;
     return (
-      <div>
+      <React.Fragment>
         <nav className="navbar">
           <div className="container">
             <div className="navbar-brand">
               <a className="navbar-item" href="../">
                 <img src="/wea.png" alt="wea.my" width="91" height="24" />
               </a>
-              <span className="navbar-burger burger" data-target="navbarMenu">
+              <span
+                id="burger-button"
+                className={`burger navbar-burger ${this.state.active ? 'is-active' : ''}`}
+                onClick={this.toggle}
+                onKeyPress={() => {}}
+                role="button"
+                tabIndex="0"
+              >
                 <span />
                 <span />
                 <span />
               </span>
             </div>
-            <div id="navbarMenu" className="navbar-menu">
+            <div id="navbarMenu" className={`navbar-menu ${this.state.active ? 'is-active' : ''}`}>
               <div className="navbar-end">
                 <a className="navbar-item" href="/">
                   Home
@@ -39,8 +58,8 @@ class Template extends React.Component {
           </div>
         </section>
         {children}
-      </div>
+      </React.Fragment>
     );
   }
 }
-export default Template;
+export default Layout;
