@@ -1,0 +1,5 @@
+# Redirect domain aliases to primary domain
+https://azwan.my/* https://wea.my/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://wea-my.netlify.com/* https://wea.my/:splat 301!
