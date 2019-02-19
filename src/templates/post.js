@@ -49,13 +49,13 @@ export default BlogPost;
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!, $next: String, $prev: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
       frontmatter {
         title
         date(formatString: "D MMMM YYYY")
         categories
         tags
       }
+      html
     }
     prev: markdownRemark(fields: { slug: { eq: $prev } }) {
       frontmatter {

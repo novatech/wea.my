@@ -18,7 +18,7 @@ sudo apt-get install build-essential linux-headers-$(uname -r)
 extract the source
 
 ```console
-tar xjvf 2011_0719_RT3070_RT3370_RT5370_RT5372_Linux_STA\V2.5.0.3_DPO.bz2 && cd 2011_0719_RT3070\*
+tar xjvf 2011_0719_RT3070_RT3370_RT5370_RT5372_Linux_STA_V2.5.0.3_DPO.bz2 && cd 2011_0719_RT3070*
 ```
 
 inline edit /os/linux/config.mk to enable WPA support (i'm too lazy to fire vim)

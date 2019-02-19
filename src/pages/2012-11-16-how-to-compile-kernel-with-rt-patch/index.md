@@ -61,29 +61,29 @@ below is the setting that use, please find the menu by browsing the menu config 
 ```console
 Processor Type and Features
 [ ] Enable MPS table
-Processor family (Core 2/newer Xeon) ->
+Processor family (Core 2/newer Xeon) -->
 [ ] IBM Calgary IOMMU support
-Preemption Model (Fully Preemptible Kernel (RT)) ->
-Timer frequency (1000 HZ) ->
+Preemption Model (Fully Preemptible Kernel (RT)) -->
+Timer frequency (1000 HZ) -->
 [ ] kernel crash dumps
 
 Kernel Hacking
 [ ] Enable unused/obsolete exported symbols
 [ ] Kernel debugging
 [ ] Compile the kernel with frame pointers
-RCU Implementation (Preemptible tree-based hierarchical RCU) ->
+RCU Implementation (Preemptible tree-based hierarchical RCU) -->
 ```
 
 below is the setting to enable general support for (most) webcams
 
 ```console
-evice Drivers ->
-[*] Multimedia Support ->
+Device Drivers -->
+[*] Multimedia Support -->
 [*] Cameras/video grabbers support
 .
 .
-[*] Video capture adapters (NEW) ->
-[*] V4L USB devices ->
+[*] Video capture adapters (NEW) -->
+[*] V4L USB devices -->
 <M> USB Video Class (UVC)
 
 [ ] = untick
@@ -93,23 +93,23 @@ evice Drivers ->
 [optional] this is gcc option tuned for my machine and i'm using Intel(R) Core(TM)2 Duo CPU E4500, yours may differ
 
 ```console
-export CFLAGS="-O2 -pipe -march=native -param l1-cache-size=32 -param l1-cache-line-size=64 -param l2-cache-size=2048 -mtune=native -mfpmath=sse -m64"
+export CFLAGS="-O2 -pipe -march=native --param l1-cache-size=32 --param l1-cache-line-size=64 --param l2-cache-size=2048 -mtune=native -mfpmath=sse -m64";
 export CXXFLAGS="$CFLAGS"
 ```
 
 lets compile our kernel and build the .deb package (you may choose your own append_to_version= )
 
 ```console
-CONCURRENCY_LEVEL=$(getconf \_NPROCESSORS_ONLN) fakeroot make-kpkg -initrd -append_to_version=-zxr -revision=0 kernel_image kernel_headers
+CONCURRENCY_LEVEL=$(getconf _NPROCESSORS_ONLN) fakeroot make-kpkg --initrd --append_to_version=-zxr --revision=0 kernel_image kernel_headers
 
 cd ..
-dpkg -i linux-\*3.6.6\*.deb
+dpkg -i linux-*3.6.6*.deb
 ```
 
 reboot to and select your new kernel. check your kernel and you should see something like below
 
 ```console
-┌─\[novatech\]\[~\]
+┌─[novatech][~]
 └──╼ uname -a
 Linux ZX10R 3.6.6-zxr #1 SMP PREEMPT RT Fri Nov 16 01:45:28 MYT 2012 x86_64 GNU/Linux
 ```
@@ -124,6 +124,5 @@ have fun with your blazing fast responsive desktop ~
 
 ```console
     export CLEAN_SOURCE=no
-    CONCURRENCY_LEVEL=$(getconf \_NPROCESSORS_ONLN) fakeroot make-kpkg \
-    -initrd -append_to_version=-zxr -revision=0 kernel_image kernel_headers
+    CONCURRENCY_LEVEL=$(getconf _NPROCESSORS_ONLN) fakeroot make-kpkg --initrd --append_to_version=-zxr --revision=0 kernel_image kernel_headers
 ```
