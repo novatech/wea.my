@@ -2,14 +2,22 @@ language: node_js
 
 os:
   - linux
-  - osx
+
+cache:
+  directories:
+    - node_modules
 
 node_js:
-  - "node"
-  - "lts/*"
-  - "7"
-  - "8"
+  - 'stable'
+
+env:
+  - GATSBY_TELEMETRY_DISABLED=1
+
+before_script:
+  - npm i -g gatsby
+  - npm i
 
 script:
-  - npm install
   - npm run lint
+  - npm run remark-lint
+  - npm run build
