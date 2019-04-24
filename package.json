@@ -3,7 +3,7 @@
   "dependencies": {
     "autoprefixer": "^9.5.1",
     "bulma": "^0.7.4",
-    "gatsby": "^2.3.27",
+    "gatsby": "^2.3.29",
     "gatsby-pagination": "^1.2.0",
     "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-manifest": "^2.0.29",
