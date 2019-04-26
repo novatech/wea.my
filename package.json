@@ -3,7 +3,7 @@
   "dependencies": {
     "autoprefixer": "^9.5.1",
     "bulma": "^0.7.4",
-    "gatsby": "^2.3.27",
+    "gatsby": "^2.3.31",
     "gatsby-pagination": "^1.2.0",
     "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-manifest": "^2.0.29",
@@ -19,7 +19,7 @@
     "gatsby-remark-images": "^3.0.11",
     "gatsby-remark-prismjs": "^3.2.8",
     "gatsby-source-filesystem": "^2.0.32",
-    "gatsby-transformer-remark": "^2.3.10",
+    "gatsby-transformer-remark": "^2.3.12",
     "node-sass": "^4.11.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.6.0",
@@ -33,7 +33,7 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-prettier": "^4.2.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
