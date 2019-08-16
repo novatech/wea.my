@@ -17,7 +17,7 @@ class Layout extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <React.Fragment>
+      <>
         <nav className="navbar">
           <div className="container">
             <div className="navbar-brand">
@@ -58,7 +58,7 @@ class Layout extends React.Component {
           </div>
         </section>
         {children}
-      </React.Fragment>
+      </>
     );
   }
 }
