@@ -4,12 +4,12 @@
 $family-serif: 'Open Sans', sans-serif;
 $family-primary: $family-serif;
 
-$primary: #ff9a00;
+$primary: #191970;
 $primary-invert: findColorInvert($primary);
-$info: #3ec1d3;
-$link: #ff165d;
+$info: #754f99;
+$link: #ff4500;
 
-$body-background-color: #f8f3d4;
+$body-background-color: #253046;
 $body-size: 14px;
 
 .hero-body {
@@ -37,7 +37,7 @@ $body-size: 14px;
   width: 60px;
   height: 60px;
   margin-left: -30px;
-  border: 5px solid #ffffff;
+  border: 5px solid $primary-invert;
   border-radius: 50%;
 }
 
@@ -70,7 +70,7 @@ div.column.is-8:last-child {
 }
 
 .article-subtitle {
-  color: #909aa0 !important;
+  color: $primary !important;
 }
 
 .article-body {
