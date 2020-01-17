@@ -18,11 +18,11 @@ class Layout extends React.Component {
     const { children } = this.props;
     return (
       <>
-        <nav className="navbar">
+        <nav className="navbar is-info">
           <div className="container">
             <div className="navbar-brand">
-              <a className="navbar-item" href="../">
-                <img src="/wea.png" alt="wea.my" width="91" height="24" />
+              <a className="navbar-item" href="/">
+                <p className="is-capitalized">wea.my</p>
               </a>
               <span
                 id="burger-button"
@@ -50,10 +50,10 @@ class Layout extends React.Component {
           </div>
         </nav>
 
-        <section className="hero is-info is-medium is-bold">
+        <section className="hero is-link is-medium is-bold">
           <div className="hero-body">
             <div className="container has-text-centered">
-              <h1 className="title">acknowledge failure as first class citizen</h1>
+              <h1 className="title">...</h1>
             </div>
           </div>
         </section>

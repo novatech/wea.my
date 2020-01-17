@@ -31,7 +31,7 @@ class BlogPost extends React.Component {
                         <span className="tag is-rounded is-info">
                           {post.tags && `${post.tags.join()}`}
                         </span>
-                        <span className="tag is-rounded">{post.date}</span>
+                        <span className="tag is-rounded is-link">{post.date}</span>
                       </div>
                     </div>
                   </div>
