@@ -20,7 +20,7 @@
     "gatsby-remark-prismjs": "^3.3.30",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-remark": "^2.6.48",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "postcss-scss": "^2.0.0",
