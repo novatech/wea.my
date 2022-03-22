@@ -18,7 +18,6 @@ jobs:
           node-version: 17
           
       - name: Build site
-        working-directory: ./wea.my
         run: |
           yarn install
           yarn build
@@ -26,7 +25,7 @@ jobs:
       - name: Netlify deployment      
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './wea.my/public'
+          publish-dir: './public'
           production-branch: master 
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
