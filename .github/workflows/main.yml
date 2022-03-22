@@ -1,0 +1,33 @@
+name: Build and Deploy to Netlify
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 17
+          
+      - name: Build site
+        working-directory: ./wea.my
+        run: |
+          yarn install
+          yarn build
+          
+      - name: Netlify deployment      
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: './wea.my/public'
+          production-branch: master 
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
