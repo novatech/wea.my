@@ -13,13 +13,13 @@ tags:
 
 we will be working here
 
-```console
+```bash
 cd /usr/src/
 ```
 
 download all required files
 
-```console
+```bash
 axel -a http://www.kernel.org/pub/linux/kernel/v3.0/linux-3.6.6.tar.bz2
 tar xjvf linux-3.6.6.tar.bz2 && cd linux-3.6.6/
 axel -a http://www.kernel.org/pub/linux/kernel/projects/rt/3.6/patch-3.6.6-rt17.patch.bz2
@@ -27,38 +27,38 @@ axel -a http://www.kernel.org/pub/linux/kernel/projects/rt/3.6/patch-3.6.6-rt17.
 
 test the RT patch before actually patch it ( make sure you are now in /usr/src/linux-3.6.6/ )
 
-```console
+```bash
 bzcat patch-3.6.6-rt17.patch.bz2|patch -p1 --dry-run
 ```
 
 if everything seem ok, lets really patch it
 
-```console
+```bash
 bzcat patch-3.6.6-rt17.patch.bz2|patch -p1
 ```
 
 remove the -rt17 prefix local kernel version. this seem to cause problem when running make-kpkg later
 
-```console
+```bash
 echo > localversion-rt
 ```
 
 copy current kernel configuration
 
-```console
+```bash
 make clean && make mrproper && cp /boot/config-$(uname -r) ./.config
 ```
 
 configure our kernel
 
-```console
+```bash
 make menuconfig
 ```
 
 below is the setting that use, please find the menu by browsing the menu config console\
 `note: please choose processor family accordingly`
 
-```console
+```bash
 Processor Type and Features
 [ ] Enable MPS table
 Processor family (Core 2/newer Xeon) -->
@@ -76,7 +76,7 @@ RCU Implementation (Preemptible tree-based hierarchical RCU) -->
 
 below is the setting to enable general support for (most) webcams
 
-```console
+```bash
 Device Drivers -->
 [*] Multimedia Support -->
 [*] Cameras/video grabbers support
@@ -92,14 +92,14 @@ Device Drivers -->
 
 [optional] this is gcc option tuned for my machine and i'm using Intel(R) Core(TM)2 Duo CPU E4500, yours may differ
 
-```console
+```bash
 export CFLAGS="-O2 -pipe -march=native --param l1-cache-size=32 --param l1-cache-line-size=64 --param l2-cache-size=2048 -mtune=native -mfpmath=sse -m64";
 export CXXFLAGS="$CFLAGS"
 ```
 
 lets compile our kernel and build the .deb package (you may choose your own append_to_version= )
 
-```console
+```bash
 CONCURRENCY_LEVEL=$(getconf _NPROCESSORS_ONLN) fakeroot make-kpkg --initrd --append_to_version=-zxr --revision=0 kernel_image kernel_headers
 
 cd ..
@@ -108,7 +108,7 @@ dpkg -i linux-*3.6.6*.deb
 
 reboot to and select your new kernel. check your kernel and you should see something like below
 
-```console
+```bash
 ┌─[novatech][~]
 └──╼ uname -a
 Linux ZX10R 3.6.6-zxr #1 SMP PREEMPT RT Fri Nov 16 01:45:28 MYT 2012 x86_64 GNU/Linux
@@ -122,7 +122,7 @@ have fun with your blazing fast responsive desktop ~
 1.  this guide can use to compile normal kernel without RT patch
 2.  if you would like recompile the kernel after enabling some modules in menuconfig, below is how make make-kpkg faster
 
-```console
+```bash
     export CLEAN_SOURCE=no
     CONCURRENCY_LEVEL=$(getconf _NPROCESSORS_ONLN) fakeroot make-kpkg --initrd --append_to_version=-zxr --revision=0 kernel_image kernel_headers
 ```

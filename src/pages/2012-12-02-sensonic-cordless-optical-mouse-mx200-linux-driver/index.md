@@ -18,7 +18,7 @@ so i bought this sensonic cordless optical mouse MX200 and I'm being using it ex
 
 It was great in windows but not working so well in Linux. lsusb output show the mouse keep connected and disconnected randomly, render it to be unusable.
 
-```console
+```bash
 $ lsusb output
 Bus 006 Device 002: ID 0603:1602 Novatek Microelectronics Corp.
 ```

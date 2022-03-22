@@ -29,7 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-      `).then(result => {
+      `).then((result) => {
         if (result.errors) {
           reject(result.errors);
         }
@@ -45,7 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage,
           edges: result.data.allMarkdownRemark.edges,
           component: blogPost,
-          edgeParser: edge => ({
+          edgeParser: (edge) => ({
             path: edge.node.fields.slug,
             context: {
               slug: edge.node.fields.slug,

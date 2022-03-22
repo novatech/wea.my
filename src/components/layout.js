@@ -9,7 +9,7 @@ class Layout extends React.Component {
   }
 
   toggle() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       active: !prevState.active,
     }));
   }
@@ -30,8 +30,7 @@ class Layout extends React.Component {
                 onClick={this.toggle}
                 onKeyPress={() => {}}
                 role="button"
-                tabIndex="0"
-              >
+                tabIndex="0">
                 <span />
                 <span />
                 <span />
