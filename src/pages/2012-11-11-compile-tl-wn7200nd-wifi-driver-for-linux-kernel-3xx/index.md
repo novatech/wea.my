@@ -11,25 +11,25 @@ http://www.ralinktech.com/en/04_support/support.php?sn=501
 
 install required files to build this
 
-```console
+```bash
 sudo apt-get install build-essential linux-headers-$(uname -r)
 ```
 
 extract the source
 
-```console
+```bash
 tar xjvf 2011_0719_RT3070_RT3370_RT5370_RT5372_Linux_STA_V2.5.0.3_DPO.bz2 && cd 2011_0719_RT3070*
 ```
 
 inline edit /os/linux/config.mk to enable WPA support (i'm too lazy to fire vim)
 
-```console
+```bash
 perl -i -pe 's/^(HAS_WPA_SUPPLICANT|HAS_NATIVE_WPA_SUPPLICANT_SUPPORT)=(n)$/\1=y/g' os/linux/config.mk
 ```
 
 lets verify that we correctly replace the string (shrug!)
 
-```console
+```bash
 grep -E '^(HAS_WPA_SUPPLICANT|HAS_NATIVE_WPA_SUPPLICANT_SUPPORT)' os/linux/config.mk
 HAS_WPA_SUPPLICANT=y
 HAS_NATIVE_WPA_SUPPLICANT_SUPPORT=y
@@ -37,25 +37,25 @@ HAS_NATIVE_WPA_SUPPLICANT_SUPPORT=y
 
 compile & install
 
-```console
+```bash
 sudo make && sudo make install
 ```
 
 add module to the kernel
 
-```console
+```bash
 sudo modprobe rt5370sta
 ```
 
 check if your network card
 
-```console
+```bash
 ifconfig -a;iwconfig
 ```
 
 You should see something like below..
 
-```console
+```bash
 ra0 Link encap:Ethernet HWaddr f8:d1:11:09:cf:87
 
 UP BROADCAST MULTICAST MTU:1500 Metric:1

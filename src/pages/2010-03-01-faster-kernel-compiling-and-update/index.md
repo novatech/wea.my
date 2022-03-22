@@ -18,7 +18,7 @@ so here, i want to share something that i've learned alot during my experience i
 
 if you want to recompile any changes that you make to the source like some security patch. you can quickly recompile everything that changed like this. (debian style)
 
-```console
+```bash
 rm -rf debian/stamp # clean stamp build
 
 CONCURRENCY_LEVEL=3 fakeroot make-kpkg \
@@ -29,7 +29,7 @@ note you need to use same **--revision=0.1** everytime you do this.. so just pic
 
 another quick workaround that might be handy when you're working on latest kernel from 2.6.31 to 2.6.32 where you get error version missmatch. this is due to build script looking for utsrelease.h but it doesn't exist in include/linux folder anymore. you can either symlink it to ./include/generated/utsrelease.h
 
-```console
+```bash
 ln -s ./include/generated/utsrelease.h ./include/linux/utsrelease.h
 ```
 

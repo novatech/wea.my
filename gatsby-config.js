@@ -26,7 +26,17 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false,
+          },
+        },
+      },
+    },
     `gatsby-plugin-postcss`,
     {
       resolve: 'gatsby-transformer-remark',
@@ -58,6 +68,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-sharp',
     'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-netlify',

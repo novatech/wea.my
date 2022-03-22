@@ -22,7 +22,7 @@ and we have crossword like this
 
 now using common word list table we can easily solve this by
 
-```console
+```bash
 grep -e ^...r.p.......r$ /usr/share/dict/words
 ```
 
@@ -30,6 +30,6 @@ grep -e ^...r.p.......r$ /usr/share/dict/words
 
 also make sure you have the word list package installed
 
-```console
+```bash
 sudo apt-get install wamerican
 ```
