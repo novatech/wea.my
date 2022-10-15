@@ -72,7 +72,6 @@ module.exports = {
     'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-netlify',
-    'gatsby-plugin-preact',
     'gatsby-plugin-remove-generator',
     {
       resolve: `gatsby-plugin-postbuild`,

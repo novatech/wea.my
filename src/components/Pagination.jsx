@@ -4,30 +4,30 @@ import React from 'react';
 function Pagination({ prevPath, prevTitle, nextPath, nextTitle }) {
   return (
     <nav className="level" aria-label="pagination">
-      {prevPath && (
-        <div className="level-left">
-          <div className="level-item">
+      <div className="level-left">
+        <div className="level-item">
+          {prevPath && (
             <a className="button is-info" rel="prev" title={prevTitle} href={prevPath}>
               <span aria-hidden="true">
                 &#8592;
                 {prevTitle}
               </span>
             </a>
-          </div>
+          )}
         </div>
-      )}
-      {nextPath && (
-        <div className="level-right">
-          <div className="level-item">
+      </div>
+      <div className="level-right">
+        <div className="level-item">
+          {nextPath && (
             <a className="button is-info" rel="prev" title={nextTitle} href={nextPath}>
               <span aria-hidden="true">
                 {nextTitle}
                 &#8594;
               </span>
             </a>
-          </div>
+          )}
         </div>
-      )}
+      </div>
     </nav>
   );
 }
