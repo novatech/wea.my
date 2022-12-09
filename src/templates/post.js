@@ -25,13 +25,11 @@ class BlogPost extends React.Component {
                         {post.title}
                       </p>
                       <div className="tags has-addons level-item">
-                        <span className="tag is-rounded is-info">
+                        <span className="tag is-info">
                           {post.categories && `${post.categories.join()}`}
                         </span>
-                        <span className="tag is-rounded is-info">
-                          {post.tags && `${post.tags.join()}`}
-                        </span>
-                        <span className="tag is-rounded is-link">{post.date}</span>
+                        <span className="tag is-info">{post.tags && `${post.tags.join()}`}</span>
+                        <span className="tag is-link">{post.date}</span>
                       </div>
                     </div>
                   </div>

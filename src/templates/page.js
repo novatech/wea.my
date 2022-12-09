@@ -33,7 +33,7 @@ class BlogPage extends React.Component {
                           <p className="title article-title is-capitalized">
                             <Link to={node.fields.slug}>{post.title}</Link>
                           </p>
-                          <p className="subtitle is-6 article-subtitle">{post.date}</p>
+                          <p className="tag is-info">{post.date}</p>
                         </div>
                       </div>
                       <div

@@ -7,7 +7,7 @@ function Pagination({ prevPath, prevTitle, nextPath, nextTitle }) {
       <div className="level-left">
         <div className="level-item">
           {prevPath && (
-            <a className="button is-info" rel="prev" title={prevTitle} href={prevPath}>
+            <a className="button is-brutal" rel="prev" title={prevTitle} href={prevPath}>
               <span aria-hidden="true">
                 &#8592;
                 {prevTitle}
@@ -19,7 +19,7 @@ function Pagination({ prevPath, prevTitle, nextPath, nextTitle }) {
       <div className="level-right">
         <div className="level-item">
           {nextPath && (
-            <a className="button is-info" rel="prev" title={nextTitle} href={nextPath}>
+            <a className="button is-brutal" rel="prev" title={nextTitle} href={nextPath}>
               <span aria-hidden="true">
                 {nextTitle}
                 &#8594;

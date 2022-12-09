@@ -18,7 +18,7 @@ class Layout extends React.Component {
     const { children } = this.props;
     return (
       <>
-        <nav className="navbar is-info">
+        <nav className="navbar">
           <div className="container">
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
@@ -49,7 +49,7 @@ class Layout extends React.Component {
           </div>
         </nav>
 
-        <section className="hero is-link is-medium is-bold">
+        <section className="hero is-medium">
           <div className="hero-body">
             <div className="container has-text-centered">
               <h1 className="title">...</h1>
