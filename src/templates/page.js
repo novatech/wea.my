@@ -10,7 +10,7 @@ class BlogPage extends React.Component {
     const pageTitle = page > 1 ? `wea.my - page ${page}/${total}` : 'wea.my';
     return (
       <Layout location={this.props.location}>
-        <div className="container">
+        <div className="container is-desktop">
           <Helmet title={pageTitle} />
           <div className="column is-8 is-offset-2">
             <section className="articles">

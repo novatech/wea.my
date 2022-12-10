@@ -17,20 +17,27 @@ class BlogPost extends React.Component {
           <div className="column is-8 is-offset-2">
             <Helmet title={`${post.title}`} />
             <section className="articles" key={slug}>
-              <div className="card article">
+              <div className="card article" key={slug}>
                 <div className="card-content">
                   <div className="media">
+                    <div className="media-center">
+                      <img
+                        src="/avatar.png"
+                        className="author-image"
+                        alt=""
+                        width="41"
+                        height="50"
+                      />
+                    </div>
                     <div className="media-content has-text-centered">
                       <p className="title article-title is-capitalized has-text-link">
                         {post.title}
                       </p>
-                      <div className="tags has-addons level-item">
-                        <span className="tag is-info">
-                          {post.categories && `${post.categories.join()}`}
-                        </span>
-                        <span className="tag is-info">{post.tags && `${post.tags.join()}`}</span>
-                        <span className="tag is-link">{post.date}</span>
-                      </div>
+                      <span className="tag is-info">{post.date}</span>
+                      <span className="tag is-link">
+                        {post.categories && `${post.categories.join()}`}
+                      </span>
+                      <span className="tag is-link">{post.tags && `${post.tags.join()}`}</span>
                     </div>
                   </div>
                   <div

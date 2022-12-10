@@ -38,7 +38,7 @@ class Layout extends React.Component {
             </div>
             <div id="navbarMenu" className={`navbar-menu ${this.state.active ? 'is-active' : ''}`}>
               <div className="navbar-end">
-                <a className="navbar-item" href="/">
+                <a className="navbar-item is-active" href="/">
                   Home
                 </a>
                 <a className="navbar-item" href="/">
@@ -49,7 +49,7 @@ class Layout extends React.Component {
           </div>
         </nav>
 
-        <section className="hero is-medium">
+        <section className="hero">
           <div className="hero-body">
             <div className="container has-text-centered">
               <h1 className="title">...</h1>

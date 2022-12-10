@@ -9,7 +9,7 @@ $primary-invert: findColorInvert($primary);
 $info: #ff90e8;
 $link: #23a094;
 $body-background-color: #dfdfdf;
-$body-size: 0.9em;
+$body-size: 1em;
 
 .navbar {
   background-color: #ff90e8 !important;
@@ -45,17 +45,17 @@ $body-size: 0.9em;
   position: absolute;
   background-color: #ffc900;
   border: 2px solid #000000;
-  top: 15px;
-  left: 15px;
-  right: -15px;
-  bottom: -15px;
+  top: 10px;
+  left: 10px;
+  right: -10px;
+  bottom: -10px;
   z-index: -1;
 }
 
 .card-content:hover:after {
   background-color: #ff90e8;
   border: 2px solid #000000;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease-in;
 }
 
 .button.is-brutal {
@@ -148,5 +148,5 @@ div.column.is-8:last-child {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&display=swap');
-@import '~prismjs/themes/prism-okaidia';
 @import '~bulma/bulma';
+@import '~prismjs/themes/prism-okaidia';
