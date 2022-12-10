@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-function Pagination({ prevPath, prevTitle, nextPath, nextTitle }) {
+function Pagination({ prevPath, prevTitle, nextPath, nextTitle, fromPost }) {
   return (
-    <nav className="level" aria-label="pagination">
+    <nav className={`level is-mobile ${fromPost ? 'is-hidden-touch' : ''}`} aria-label="pagination">
       <div className="level-left">
         <div className="level-item">
           {prevPath && (
             <a className="button is-brutal" rel="prev" title={prevTitle} href={prevPath}>
               <span aria-hidden="true">
-                &#8592;
-                {prevTitle}
+                &#8592;&nbsp;
+                {prevTitle.substring(0, 30)}
+                {prevTitle.length >= 30 && '...'}
               </span>
             </a>
           )}
@@ -19,10 +20,11 @@ function Pagination({ prevPath, prevTitle, nextPath, nextTitle }) {
       <div className="level-right">
         <div className="level-item">
           {nextPath && (
-            <a className="button is-brutal" rel="prev" title={nextTitle} href={nextPath}>
+            <a className="button is-brutal" rel="next" title={nextTitle} href={nextPath}>
               <span aria-hidden="true">
-                {nextTitle}
-                &#8594;
+                {nextTitle.length >= 30 && '...'}
+                {nextTitle.substring(0, 30)}
+                &nbsp;&#8594;
               </span>
             </a>
           )}

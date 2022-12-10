@@ -4,6 +4,7 @@
     "autoprefixer": "^10.4.4",
     "bulma": "^0.9.3",
     "gatsby": "^4.10.3",
+    "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-pagination": "^1.2.0",
     "gatsby-plugin-catch-links": "^4.10.0",
     "gatsby-plugin-manifest": "^4.10.2",

@@ -24,6 +24,20 @@ module.exports = {
         icon: 'static/wea-logo.png',
       },
     },
+    {
+      resolve: 'gatsby-omni-font-loader',
+      options: {
+        mode: 'async',
+        enableListener: true,
+        preconnect: ['https://fonts.gstatic.com'],
+        web: [
+          {
+            name: 'PT Serif',
+            file: 'https://fonts.googleapis.com/css2?family=PT+Serif',
+          },
+        ],
+      },
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     {

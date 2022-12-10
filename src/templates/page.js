@@ -33,7 +33,17 @@ class BlogPage extends React.Component {
                           <p className="title article-title is-capitalized">
                             <Link to={node.fields.slug}>{post.title}</Link>
                           </p>
-                          <p className="tag is-info">{post.date}</p>
+                          <div className="tags is-justify-content-center">
+                            <span className="tag is-brutal is-info">{post.date}</span>
+                            {post.categories &&
+                              post.categories.map((item) => (
+                                <span className="tag is-brutal is-link">{item}</span>
+                              ))}
+                            {post.tags &&
+                              post.tags.map((item) => (
+                                <span className="tag is-brutal is-success">{item}</span>
+                              ))}
+                          </div>{' '}
                         </div>
                       </div>
                       <div

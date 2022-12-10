@@ -22,7 +22,7 @@ class Layout extends React.Component {
           <div className="container">
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
-                <p className="is-capitalized">wea.my</p>
+                <img src="/wea-logo.png" alt="Wea.my" />
               </a>
               <span
                 id="burger-button"

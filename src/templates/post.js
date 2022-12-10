@@ -33,11 +33,17 @@ class BlogPost extends React.Component {
                       <p className="title article-title is-capitalized has-text-link">
                         {post.title}
                       </p>
-                      <span className="tag is-info">{post.date}</span>
-                      <span className="tag is-link">
-                        {post.categories && `${post.categories.join()}`}
-                      </span>
-                      <span className="tag is-link">{post.tags && `${post.tags.join()}`}</span>
+                      <div className="tags is-justify-content-center">
+                        <span className="tag is-brutal is-info">{post.date}</span>
+                        {post.categories &&
+                          post.categories.map((item) => (
+                            <span className="tag is-brutal is-link">{item}</span>
+                          ))}
+                        {post.tags &&
+                          post.tags.map((item) => (
+                            <span className="tag is-brutal is-success">{item}</span>
+                          ))}
+                      </div>
                     </div>
                   </div>
                   <div
@@ -52,6 +58,7 @@ class BlogPost extends React.Component {
               prevTitle={nextTitle}
               nextPath={prev}
               nextTitle={prevTitle}
+              fromPost
             />
           </div>
         </div>

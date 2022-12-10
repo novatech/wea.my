@@ -1,15 +1,56 @@
 @import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/sass/utilities/functions';
 
-$family-serif: 'PT Serif', serif;
-$family-primary: $family-serif;
-
 $primary: #000000;
 $primary-invert: findColorInvert($primary);
 $info: #ff90e8;
 $link: #23a094;
 $body-background-color: #dfdfdf;
 $body-size: 1em;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#___gatsby {
+  isolation: isolate;
+}
 
 .navbar {
   background-color: #ff90e8 !important;
@@ -58,6 +99,10 @@ $body-size: 1em;
   transition: all 0.2s ease-in;
 }
 
+.tag.is-brutal {
+  border: 2px solid #000000;
+}
+
 .button.is-brutal {
   background-color: #ff90e8;
   border: 2px solid #000000;
@@ -97,6 +142,7 @@ $body-size: 1em;
 .media-content {
   margin-top: 3rem;
   margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
 }
 
 .article {
@@ -119,7 +165,7 @@ div.column.is-8:last-child {
 }
 
 .article-subtitle {
-  color: $primary  !important;
+  color: $primary !important;
 }
 
 .article-body {
@@ -147,6 +193,5 @@ div.column.is-8:last-child {
   margin: inherit;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&display=swap');
 @import '~bulma/bulma';
 @import '~prismjs/themes/prism-okaidia';
