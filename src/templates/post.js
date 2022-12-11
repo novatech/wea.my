@@ -1,6 +1,5 @@
-import React from 'react';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import React from 'react';
 import Layout from '../components/layout';
 import Pagination from '../components/Pagination';
 
@@ -13,16 +12,16 @@ class BlogPost extends React.Component {
     const nextTitle = this.props.data.next.frontmatter.title;
     return (
       <Layout location={this.props.location}>
+        <title>{`${post.title}`}</title>
         <div className="container">
           <div className="column is-8 is-offset-2">
-            <Helmet title={`${post.title}`} />
             <section className="articles" key={slug}>
               <div className="card article" key={slug}>
                 <div className="card-content">
                   <div className="media">
                     <div className="media-center">
                       <img
-                        src="/avatar.png"
+                        src="/avatar.jpeg"
                         className="author-image"
                         alt=""
                         width="41"
@@ -37,11 +36,15 @@ class BlogPost extends React.Component {
                         <span className="tag is-brutal is-info">{post.date}</span>
                         {post.categories &&
                           post.categories.map((item) => (
-                            <span className="tag is-brutal is-link">{item}</span>
+                            <span className="tag is-brutal is-link" key={item}>
+                              {item}
+                            </span>
                           ))}
                         {post.tags &&
                           post.tags.map((item) => (
-                            <span className="tag is-brutal is-success">{item}</span>
+                            <span className="tag is-brutal is-success" key={item}>
+                              {item}
+                            </span>
                           ))}
                       </div>
                     </div>

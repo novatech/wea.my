@@ -11,7 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(`
         {
-          allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+          allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 1000) {
             totalCount
             edges {
               node {

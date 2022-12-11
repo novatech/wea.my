@@ -39,6 +39,7 @@ Pagination.propTypes = {
   nextPath: PropTypes.string,
   prevTitle: PropTypes.string,
   nextTitle: PropTypes.string,
+  fromPost: PropTypes.bool,
 };
 
 Pagination.defaultProps = {
@@ -46,6 +47,7 @@ Pagination.defaultProps = {
   nextPath: null,
   prevTitle: 'Previous',
   nextTitle: 'Next',
+  fromPost: false,
 };
 
 export default Pagination;

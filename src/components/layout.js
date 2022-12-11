@@ -22,7 +22,7 @@ class Layout extends React.Component {
           <div className="container">
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
-                <img src="/wea-logo.png" alt="Wea.my" />
+                <img src="/wea.png" width="32px" height="32px" alt="Wea.my" />
               </a>
               <span
                 id="burger-button"

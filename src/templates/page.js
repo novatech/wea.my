@@ -1,6 +1,5 @@
-import React from 'react';
-import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
+import React from 'react';
 import Layout from '../components/layout';
 import Pagination from '../components/Pagination';
 
@@ -10,8 +9,8 @@ class BlogPage extends React.Component {
     const pageTitle = page > 1 ? `wea.my - page ${page}/${total}` : 'wea.my';
     return (
       <Layout location={this.props.location}>
+        <title>{pageTitle}</title>
         <div className="container is-desktop">
-          <Helmet title={pageTitle} />
           <div className="column is-8 is-offset-2">
             <section className="articles">
               {nodes.map(({ node }) => {
@@ -22,7 +21,7 @@ class BlogPage extends React.Component {
                       <div className="media">
                         <div className="media-center">
                           <img
-                            src="/avatar.png"
+                            src="/avatar.jpeg"
                             className="author-image"
                             alt=""
                             width="41"
@@ -37,11 +36,15 @@ class BlogPage extends React.Component {
                             <span className="tag is-brutal is-info">{post.date}</span>
                             {post.categories &&
                               post.categories.map((item) => (
-                                <span className="tag is-brutal is-link">{item}</span>
+                                <span className="tag is-brutal is-link" key={item}>
+                                  {item}
+                                </span>
                               ))}
                             {post.tags &&
                               post.tags.map((item) => (
-                                <span className="tag is-brutal is-success">{item}</span>
+                                <span className="tag is-brutal is-success" key={item}>
+                                  {item}
+                                </span>
                               ))}
                           </div>{' '}
                         </div>

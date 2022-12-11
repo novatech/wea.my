@@ -39,7 +39,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -86,7 +85,6 @@ module.exports = {
     'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-netlify',
-    'gatsby-plugin-remove-generator',
     {
       resolve: `gatsby-plugin-postbuild`,
       options: {
@@ -98,6 +96,11 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-minify-html',
+    {
+      resolve: 'gatsby-plugin-brotli',
+      options: {
+        extensions: ['css', 'html', 'js', 'svg'],
+      },
+    },
   ],
 };
