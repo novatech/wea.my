@@ -2,7 +2,7 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "^10.4.4",
-    "bulma": "^0.9.3",
+    "bulma": "^1.0.0",
     "gatsby": "^5.2.0",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-pagination": "^1.2.0",
